@@ -22,6 +22,7 @@ import functools
 import warnings
 from builtins import range
 from collections import defaultdict
+from dtaidistance import dtw
 
 import numpy as np
 import pandas as pd
@@ -2275,4 +2276,18 @@ def diff_max_min(x):
     
     result = max(x)-min(x)
     return result
+
+@set_property("fctype", "simple")
+def dwt_distance(a1,b1):
+    """
+    The description of your feature
+
+    :param x: the time series to calculate the feature of
+    :type x: pandas.Series
+    :return: the value of this feature
+    :return type: float
+    """
+    
+    distance = dtw.distance(a1, b1)
+    return distance
 
