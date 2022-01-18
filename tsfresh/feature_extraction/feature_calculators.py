@@ -2276,3 +2276,7 @@ def diff_max_min(x):
     result = max(x)-min(x)
     return result
 
+@set_property("fctype", "simple")
+def dwt_distance(a1,b1):
+   distance = dtw.distance(a1, b1)
+   return didtance
