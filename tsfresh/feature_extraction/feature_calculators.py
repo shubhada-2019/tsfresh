@@ -29,7 +29,7 @@ from numpy.linalg import LinAlgError
 from scipy.signal import cwt, find_peaks_cwt, ricker, welch
 from scipy.stats import linregress
 from statsmodels.tools.sm_exceptions import MissingDataError
-
+from dtaidistance import dtw
 with warnings.catch_warnings():
     # Ignore warnings of the patsy package
     warnings.simplefilter("ignore", DeprecationWarning)
