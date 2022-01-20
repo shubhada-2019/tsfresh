@@ -2278,7 +2278,7 @@ def diff_max_min(x):
     return result
 
 @set_property("fctype", "simple")
-def dwt_distance(a1,b1):
+def dwt_distance(x):
     """
     The description of your feature
 
@@ -2287,7 +2287,7 @@ def dwt_distance(a1,b1):
     :return: the value of this feature
     :return type: float
     """
-    
-    distance = dtw.distance(a1, b1)
+    a1 = np.mean(x, dtype=np.float64,axis = 0)
+    distance = dtw.distance(x)
     return distance
 
