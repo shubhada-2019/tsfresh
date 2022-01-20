@@ -2288,6 +2288,6 @@ def dwt_distance(x):
     :return type: float
     """
     a1 = np.mean(x, dtype=np.float64,axis = 0)
-    distance = dtw.distance(x)
+    distance = dtw.distance(a1,x)
     return distance
 
